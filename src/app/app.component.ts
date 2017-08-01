@@ -94,6 +94,7 @@ export class AppComponent implements OnInit {
       });
 
       console.log(this.posts);
+      window.scrollTo(0,0);
       this.retrieved = true;
   });
 }
