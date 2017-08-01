@@ -8,7 +8,9 @@ router.get('/', (req, res) => {
 });
 
 /* Talk to Indeed. */
-router.get('/posts', (req, res) => {
+router.post('/posts', (req, res) => {
+  console.log("the incoming body is.....");
+  console.log(req.body);
 
   const builtLink = `
     http://api.indeed.com/ads/apisearch?publisher=8280467879034728

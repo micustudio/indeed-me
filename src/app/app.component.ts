@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Headers } from '@angular/http';
 
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 
@@ -39,15 +40,31 @@ export class AppComponent implements OnInit {
   }
 
   getIndeedData() {
+        let inputtedData = {
+            query: this.myForm.value.query,
+            location: this.myForm.value.location,
+            sort: this.myForm.value.sort,
+            radius: this.myForm.value.radius,
+            limit: this.myForm.value.limit,
+            sitetype: this.myForm.value.sitetype
+        }
+
+        console.log(inputtedData);
+
+        const body = JSON.stringify(inputtedData);
+        console.log(body);
+
+        const headers = new Headers({'Content-Type': 'application/json'});
+        
+
       // Make the HTTP request:
-    this.http.get('/api/posts').subscribe(data => {
-      // Read the result field from the JSON response.
-      this.results = data;
-      console.log(this.results);
-    });
+      this.http.post('/api/posts', body).subscribe(data => {
+        // Read the result field from the JSON response.
+        console.log(data);
+        this.results = data;
+        console.log(this.results);
+      });
 
   }
 }
 
-
-// http://api.indeed.com/ads/apisearch?publisher=8280467879034728&q=java&format=json&l=austin%2C+tx&sort=&radius=&st=&jt=&start=&limit=&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2
