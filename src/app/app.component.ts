@@ -25,7 +25,9 @@ export class AppComponent implements OnInit {
             location: new FormControl(null, Validators.required),
             sort: new FormControl(null, Validators.required),
             radius: new FormControl(null, Validators.required),
+            start: new FormControl(null, Validators.required),
             limit: new FormControl(null, Validators.required),
+            fromage: new FormControl(null),
             sitetype: new FormControl(null, Validators.required)
 
         })
@@ -35,7 +37,9 @@ export class AppComponent implements OnInit {
           location: 'San Francisco, CA',
           sort: 'date',
           radius: '25',
+          start: '0',
           limit: '20',
+          fromage: '',
           sitetype: 'jobsite'
       });
 
@@ -49,7 +53,9 @@ export class AppComponent implements OnInit {
             location: this.myForm.value.location,
             sort: this.myForm.value.sort,
             radius: this.myForm.value.radius,
+            start: this.myForm.value.start,
             limit: this.myForm.value.limit,
+            fromage: this.myForm.value.fromage,
             sitetype: this.myForm.value.sitetype
         }
 
