@@ -1,0 +1,22 @@
+.form-box {
+    padding-top: 2rem;
+    width: 65%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.rule {
+    display: block;
+    padding-bottom: .2rem;
+    padding-left: .2rem;
+    font-weight: 700;
+}
+
+.get-data {
+    font-weight: 800;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
