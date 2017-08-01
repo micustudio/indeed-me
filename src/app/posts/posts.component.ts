@@ -14,4 +14,11 @@ export class PostsComponent implements OnInit {
   ngOnInit() {
   }
 
+  getBackgroundStyle(index){
+    if(index % 2 == 1)
+      return {'background-color': '#F2F2F2'};
+    else
+      return null;
+  }
+
 }

@@ -1,20 +1,17 @@
-<table>
-  <tbody>
-    <tr>
-      <th>Index</th>
-      <th>Title</th>
-      <th>City</th> 
-      <th>Company</th>
-      <th>Description</th>
-      <th>url</th>
-    </tr>
-    <tr *ngFor="let post of posts; let i = index">
-      <td> {{ i + 1 }}</td>
-      <td>{{ post.jobtitle }}</td>
-      <td>{{ post.city }}</td>
-      <td>{{ post.company }}</td>
-      <td class="description">{{ post.description }}</td>
-      <td>{{ post.url }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="header-row">
+  <span class="heading index">Index</span>
+  <span class="heading title">Title</span>
+  <span class="heading city">City</span> 
+  <span class="heading company">Company</span>
+  <span class="heading description">Description</span>
+  <span class="heading url">url</span>
+</div>
+
+<div class="data-row" *ngFor="let post of posts; let i = index" [ngStyle]="getBackgroundStyle(i)" >
+  <span class="datum index">{{ i + 1 }}</span>
+  <span class="datum title">{{ post.jobtitle }}</span>
+  <span class="datum city">{{ post.city }}</span>
+  <span class="datum company">{{ post.company }}</span>
+  <span class="datum description">"{{ post.description }}"</span>
+  <span class="datum url">{{ post.url }}</span>
+</div>
