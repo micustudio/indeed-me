@@ -1,0 +1,13 @@
+td {
+    border: 1px solid #555;
+    cursor: pointer;
+    padding: .2rem;
+}
+
+td:hover {
+    background-color: #999;
+}
+
+.description {
+    font-size: 0.5rem;
+}

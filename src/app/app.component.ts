@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
         })
 
         this.myForm.patchValue({
-          query: 'fullstack web developer',
+          query: 'full stack web developer',
           location: 'San Francisco, CA',
           sort: 'date',
           radius: '25',

@@ -1,3 +1,20 @@
-<p>
-  posts works!
-</p>
+<table>
+  <tbody>
+    <tr>
+      <th>Index</th>
+      <th>Title</th>
+      <th>City</th> 
+      <th>Company</th>
+      <th>Description</th>
+      <th>url</th>
+    </tr>
+    <tr *ngFor="let post of posts; let i = index">
+      <td> {{ i + 1 }}</td>
+      <td>{{ post.jobtitle }}</td>
+      <td>{{ post.city }}</td>
+      <td>{{ post.company }}</td>
+      <td class="description">{{ post.description }}</td>
+      <td>{{ post.url }}</td>
+    </tr>
+  </tbody>
+</table>
