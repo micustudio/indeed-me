@@ -1,10 +1,12 @@
-<div class="header-row">
+<!--<div class="header-row">
   <span class="heading index">Index</span>
   <span class="heading title">Title</span>
   <span class="heading city">City</span> 
   <span class="heading company">Company</span>
   <span class="heading description">Description</span>
   <span class="heading url">url</span>
+  <span class="heading date">date</span>
+  <span class="heading image-link">image-link</span>
 </div>
 
 <div class="data-row" *ngFor="let post of posts; let i = index" [ngStyle]="getBackgroundStyle(i)" >
@@ -14,4 +16,31 @@
   <span class="datum company">{{ post.company }}</span>
   <span class="datum description" innerHtml="{{ post.description }}"></span>
   <span class="datum url">{{ post.url }}</span>
-</div>
+  <span class="datum date">{{ post.date }}</span>
+  <span class="datum image-link">{{ post.imageLink }}</span>
+</div>-->
+
+<table >
+        <tr>
+            <th class="heading index">Index</th>
+            <th class="heading index">Pic</th>
+            <th class="heading title">Title</th>
+            <th class="heading city">City</th> 
+            <th class="heading company">Company</th>
+            <th class="heading description">Description</th>
+            <th class="heading url">url</th>
+            <th class="heading date">date</th>
+            <th class="heading image-link">image-link</th>
+        </tr>
+        <tr class="data-row" *ngFor="let post of posts; let i = index" [ngStyle]="getBackgroundStyle(i)">
+            <td class="datum index"><input type="text" value="{{ i + 1 }}"/></td>
+            <td class="datum pic"><img src="{{ post.imageLink }}"/></td>
+            <td class="datum title"><input type="text" value="{{ post.jobtitle }}"/></td>
+            <td class="datum city"><input type="text" value="{{ post.city }}"/></td>
+            <td class="datum company"><input type="text" value="{{ post.company }}"/></td>
+            <td class="datum description"><input type="text" value="{{ post.description }}"/></td>
+            <td class="datum url"><input type="text" value="{{ post.url }}"/></td>
+            <td class="datum date"><input type="text" value="{{ post.date }}"/></td>
+            <td class="datum image-link"><input type="text" value="{{ post.imageLink }}"/></td>
+        </tr>
+</table>

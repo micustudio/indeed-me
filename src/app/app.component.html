@@ -1,7 +1,3 @@
-<div *ngIf="retrieved" class="container-fluid">
-  <h1>Results</h1>
-  <app-posts [posts]="posts" ></app-posts>
-</div>
 <div class="container-fluid">
     <div class="container">
         <div class="form-box">
@@ -92,4 +88,9 @@
                  <p>Enter and Go! <span class="get-data" (click)="getIndeedData()">Show me the results.</span></p>
             </div>
     </div>
+</div>
+
+<div *ngIf="retrieved" class="container-fluid">
+  <h1 id="results">Results</h1>
+  <app-posts [posts]="posts" ></app-posts>
 </div>

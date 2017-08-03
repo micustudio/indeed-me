@@ -7,7 +7,10 @@ router.get('/', (req, res) => {
   res.send('api works');
 });
 
-/* Talk to Indeed. */
+/* Talk to Indeed. 
+adsdfs
+sdfds
+sdf*/
 router.post('/posts', (req, res) => {
   console.log("the incoming body is.....");
   console.log(req.body);
@@ -20,10 +23,15 @@ router.post('/posts', (req, res) => {
   const limit = req.body.limit;
   const fromage = req.body.fromage;
   const sitetype = req.body.sitetype;
+
 console.log(`${query} ${location} ${sort} ${radius} ${start} ${limit} ${fromage} ${sitetype}`)
 
   const builtLink = `
     http://api.indeed.com/ads/apisearch?publisher=8280467879034728&q=${query}&format=json&l=${location}&sort=${sort}&radius=${radius}&st=${sitetype}&jt=&start=${start}&limit=${limit}&fromage=${fromage}&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2`
+                                                    
+// const name = 'Michael';
+// console.log('HEllo my name is ' + name);
+// console.log(`HEllo my name is ${name}`);
 
     console.log("The built link is...");
     console.log(builtLink);
@@ -42,11 +50,21 @@ router.post('/description', (req, res) => {
         let html = body;
         let descriptionAlpha = html.substring(html.indexOf('<span id="job_summary"'));
         let description = descriptionAlpha.substring(0, descriptionAlpha.indexOf('</span>') + ('</span>').length);
+        let imageLink = '';
 
-        console.log(description);
+        if(html.includes('class="cmp_logo_img')){
+          console.log("yes it includes it!!! ==============");
+            imageLink = html.substring(html.indexOf('<img src="') + ('<img src="').length);
+            imageLink = imageLink.substring(0, imageLink.indexOf('"'));
+        }
+        console.log("the image link is...");
+        console.log(imageLink)
+
+        //console.log(description);
         
         res.status(200).send({
-          description: description
+          description: description,
+          imageLink: imageLink
         });
   });
 });

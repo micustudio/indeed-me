@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
           start: '0',
           limit: '20',
           fromage: '',
-          sitetype: 'jobsite'
+          sitetype: 'employer'
       });
 
   }
@@ -89,7 +89,9 @@ export class AppComponent implements OnInit {
                     element.company,
                     element.jobtitle,
                     element.url,
-                    data['description']
+                    data['description'],
+                    element.date,
+                    data['imageLink']
               );
 
               this.posts.push(post);
@@ -100,7 +102,7 @@ export class AppComponent implements OnInit {
       });
 
       console.log(this.posts);
-      window.scrollTo(0,0);
+      window.scrollTo(0, 500);
       this.retrieved = true;
   });
 }

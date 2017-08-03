@@ -1,4 +1,4 @@
-.header-row {
+/*.header-row {
     display: flex;
 }
 
@@ -33,16 +33,98 @@
 }
 
 .description {
-    flex-basis: 45%;
+    flex-basis: 40%;
     font-size: 0.5rem;
 }
 
 .url {
-    flex-basis: 15%;
+    flex-basis: 10%;
+    font-size: 0.7rem;
+}
+
+.date {
+    flex-basis: 5%;
+    font-size: 0.7rem;
+}
+
+.image-link {
+    flex-basis: 5%;
     font-size: 0.7rem;
 }
 
 .heading {
     font-size: 1.1rem;
     font-weight: 600;
+}*/
+
+input{
+    border:0px solid #000; margin:0; background:transparent; width:100%
+    }
+table tr td{
+    border-right:1px solid #000; border-bottom:1px solid #000;
+}
+
+table tr td:hover{
+    background-color: #E8E8E8;
+    cursor: pointer;
+}
+
+table{
+    background: #fff none repeat scroll 0 0;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    width: 100%;
+    }
+
+table tr:nth-child(even){
+    background:#ccc;
+}
+
+table tr:nth-child(odd){
+    background:#eee;
+}
+
+.index {
+    width: 2%;
+    text-align: center;
+}
+
+.pic {
+    width: 2%;
+}
+
+.title {
+    width: 10%;
+}
+
+.city {
+    width: 7%;
+}
+
+.company {
+    width: 8%;
+}
+
+.description {
+    width: 31%;
+    font-size: 0.5rem;
+}
+
+.url {
+    width: 10%;
+    font-size: 0.7rem;
+}
+
+.date {
+    width: 5%;
+    font-size: 0.7rem;
+}
+
+.image-link {
+    width: 5%;
+    font-size: 0.7rem;
+}
+
+img {
+    max-width: 2rem;
 }
