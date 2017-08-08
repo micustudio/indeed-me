@@ -12,6 +12,6 @@ Run `npm install` to install dependencies.
 
 Run `npm run build-me` to run the local version of the app. Navigate to `http://localhost:3000/`. 
 
-Now search for some jobs!
+Now search for some job posts!
 
 -Michael
